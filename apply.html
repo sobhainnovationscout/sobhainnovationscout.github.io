@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | Sobha Innovation Scout CEE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_sobha.png">
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">
+            <a href="index.html">Sobha Innovation Scout CEE</a>
+        </div>
+
+        <nav class="main-nav">
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="mobile-menu">
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="regulations.html">Regulations</a>
+                </li>
+
+                <li>
+                    <a href="apply.html">Apply</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+<section class="page-header inner-page-header">
+    <div class="container page-header-content">
+        <h1>Application Form</h1>
+        <p>
+            Complete the form below to apply for the
+            <strong>Sobha Innovation Scout – Poland & CEE.</strong>
+        </p>
+    </div>
+</section>
+
+<section class="application">
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Company Information</h2>
+            <p>Please provide information about your company, team, solution and potential opportunities for cooperation with Sobha.</p>
+
+            <form action="apply.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="company">1. Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name" maxlength="200" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">2. Contact Person's Full Name</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter your full name" maxlength="150" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">3. Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="name@company.com" maxlength="254" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">4. Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+48 ..." maxlength="30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">5. Company Website or LinkedIn Page</label>
+                    <input type="url" id="website" name="website" placeholder="https://..." maxlength="500" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sector">6. Sector / Industry</label>
+                    <input type="text" id="sector" name="sector" placeholder="e.g. PropTech, Construction, AI, Energy" maxlength="150" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">7. Company Description</label>
+                    <p class="form-help">Please provide a brief description of your company and its core products or services.</p>
+                    <textarea id="description" name="description" rows="8" maxlength="5000" placeholder="Tell us briefly about your company, its core products or services, and the value they provide." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="team">8. Founder and Team Information</label>
+                    <p class="form-help">Please describe your founders and key team members, including their relevant experience, expertise and competencies.</p>
+                    <textarea id="team" name="team" rows="8" maxlength="5000" placeholder="Tell us about the founders and key members of your team, their backgrounds, experience and areas of expertise." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="challenges">9. What technological or business challenges does your company address?</label>
+                    <textarea id="challenges" name="challenges" rows="8" maxlength="5000" placeholder="Describe the key technological, operational or business challenges your solution addresses." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="differentiation">10. What differentiates your company from its competitors?</label>
+                    <textarea id="differentiation" name="differentiation" rows="8" maxlength="5000" placeholder="Please describe your key competitive advantages, unique technology, expertise, business model or other differentiating factors." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cooperation">11. How do you envision potential cooperation with Sobha?</label>
+                    <textarea id="cooperation" name="cooperation" rows="8" maxlength="5000" placeholder="Describe how you see your company, technology or solution potentially working with Sobha." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pilot">12. What specific use case or pilot project would you propose to implement with Sobha, and what resources would be required?</label>
+                    <textarea id="pilot" name="pilot" rows="9" maxlength="6000" placeholder="Describe a specific use case or pilot project you would propose, including the resources, people, technology or other support required." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="impact">13. What measurable business or operational impact could your solution deliver for Sobha within the first 6–12 months of cooperation?</label>
+                    <textarea id="impact" name="impact" rows="9" maxlength="6000" placeholder="Please describe the expected measurable impact, such as cost savings, efficiency gains, revenue opportunities, risk reduction or other relevant KPIs." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment">14. Company Presentation or Brief</label>
+                    <p class="form-help">Please attach a company presentation or brief. Accepted file formats: PPTX, PDF, JPG and PNG.</p>
+                    <input type="file" id="attachment" name="attachment" accept=".pptx,.pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <input type="text" name="website_check" class="honeypot" tabindex="-1" autocomplete="off" style="display:none;">
+
+                <div class="form-group consent-group">
+                    <label class="consent-label">
+                        <input type="checkbox" id="consent" name="consent" value="1" required>
+                        <span>I consent to the processing of my personal data for the purpose of participating in the Sobha Innovation Scout – Poland & CEE recruitment process, in accordance with applicable data protection regulations.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">
+                    SUBMIT APPLICATION
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="content-section light">
+    <div class="container">
+        <h2>What Happens Next?</h2>
+        <div class="details-grid">
+            <div class="card">
+                <h3>Application Review</h3>
+                <p>Every application is carefully evaluated based on innovation, market potential, scalability and potential relevance to Sobha.</p>
+            </div>
+            <div class="card">
+                <h3>Initial Selection</h3>
+                <p>Selected companies will be contacted by our team for the next stage of the recruitment process.</p>
+            </div>
+            <div class="card">
+                <h3>Pitch Day</h3>
+                <p>Finalists will have the opportunity to present their solutions before the evaluation committee.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2>Need Help?</h2>
+        <p>If you have any questions regarding the application process, please contact us.</p>
+        <p><strong>Email:</strong> <a href="mailto:projekty@innteo.com">projekty@innteo.com</a></p>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-left">
+            <p>© 2026 Sobha Realty<br>Powered by Innteo</p>
+        </div>
+        <div class="footer-right">
+            <span class="footer-title">Contact us</span>
+            <a href="mailto:projekty@innteo.com">projekty@innteo.com</a>
+        </div>
+    </div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

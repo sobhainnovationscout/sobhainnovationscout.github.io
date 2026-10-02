@@ -1,0 +1,2304 @@
+/* =========================================================
+   SOBHA INNOVATION SCOUT CEE
+   GLOBAL STYLES & TYPOGRAPHY
+========================================================= */
+
+
+/* =========================================================
+   CUSTOM FONTS
+========================================================= */
+
+/* -------------------------
+   CHRONICLE DISPLAY
+------------------------- */
+
+@font-face {
+    font-family: "Chronicle Display";
+    src: url("fonts/Chronicle/ChronicleDisplay-Roman.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chronicle Display";
+    src: url("fonts/Chronicle/ChronicleDisplay-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chronicle Display";
+    src: url("fonts/Chronicle/ChronicleDisplay-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* -------------------------
+   RINGSIDE REGULAR
+------------------------- */
+
+@font-face {
+    font-family: "Ringside Regular";
+    src: url("fonts/Ringside/RingsideRegular-Book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ringside Regular";
+    src: url("fonts/Ringside/RingsideRegular-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ringside Regular";
+    src: url("fonts/Ringside/RingsideRegular-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ringside Regular";
+    src: url("fonts/Ringside/RingsideRegular-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* -------------------------
+   RINGSIDE WIDE
+------------------------- */
+
+@font-face {
+    font-family: "Ringside Wide";
+    src: url("fonts/Ringside/RingsideWide-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Ringside Regular", Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #111;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Chronicle Display", Georgia, serif;
+    color: #000000;
+    line-height: 1.2;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 16px;
+    color: #444;
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 400;
+}
+
+strong {
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    z-index: 1000;
+
+    background: transparent;
+    border-bottom: 1px solid transparent;
+
+    transition:
+        background-color .35s ease,
+        backdrop-filter .35s ease,
+        -webkit-backdrop-filter .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+header.scrolled {
+    background: rgba(35, 34, 32, .45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: min(1640px, calc(100% - 80px));
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+
+    font-family: "Ringside Wide", "Ringside Regular", sans-serif;
+    font-weight: 600;
+
+    color: #fff;
+}
+
+.logo img {
+    height: 46px;
+    width: auto;
+
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+
+    color: #fff;
+}
+
+nav a {
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-weight: 600;
+
+    padding-bottom: 4px;
+
+    color: #fff;
+
+    transition: .25s;
+
+    letter-spacing: .06em;
+
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #fff;
+
+    border-bottom: 2px solid rgba(255, 255, 255, .8);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(20px, 2vw, 40px);
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.50),
+            rgba(0,0,0,.40)
+        ),
+        url("images/sobhabanner.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    padding: 0;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .03) 0%,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(0, 0, 0, .18) 75%,
+            rgba(0, 0, 0, .45) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, calc(100% - 40px));
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    direction: ltr;
+
+    padding: 90px 0 30px;
+}
+
+.hero-text {
+    text-align: center;
+
+    direction: ltr;
+
+    width: 100%;
+}
+
+.lead {
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.5rem;
+
+    color: #fff;
+
+    margin-bottom: 30px;
+
+    display: block;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: clamp(3.2rem, 5.3vw, 6rem);
+
+    line-height: 1.03;
+
+    margin-bottom: 0;
+
+    color: #fff;
+
+    font-weight: 400;
+
+    letter-spacing: .01em;
+
+    text-align: center;
+
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, .22);
+}
+
+.hero-image {
+    width: 92%;
+}
+
+.hero-powered {
+    margin-top: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.hero-powered img {
+    display: block;
+
+    width: clamp(130px, 11vw, 190px);
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 175px;
+
+    margin-top: 36px;
+
+    padding: 16px 38px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    border-radius: 50px;
+
+    background: rgba(210, 210, 210, .88);
+
+    color: #333;
+
+    font-family: "Ringside Wide", "Ringside Regular", sans-serif;
+
+    font-weight: 600;
+
+    font-size: .82rem;
+
+    letter-spacing: .24em;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+.hero-button:hover {
+    background: #fff;
+
+    color: #111;
+
+    transform: translateY(-2px);
+}
+
+.hero .btn {
+    background: rgba(210, 210, 210, .88);
+
+    color: #333;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 34px;
+
+    background: #000000;
+    color: #fff;
+
+    border-radius: 8px;
+
+    transition: .3s;
+
+    font-family: "Ringside Wide", "Ringside Regular", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #A68943;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   Capsule CTA
+========================================================= */
+
+.capsule {
+    border-radius: 50px;
+    text-transform: uppercase;
+
+    background: #000000;
+    color: #fff;
+
+    font-family: "Ringside Wide", "Ringside Regular", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    display: inline-block;
+
+    padding: 15px 34px;
+
+    transition: .3s;
+}
+
+.capsule:hover {
+    background: #A68943;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    background: #f3f3f3;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: "Chronicle Display", Georgia, serif;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.timeline-item {
+    background: #fff;
+
+    padding: 40px 30px;
+
+    border-radius: 0;
+
+    border-top: 4px solid #C8A53C;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+    text-align: center;
+}
+
+.timeline-item h3 {
+    font-family: "Chronicle Display", Georgia, serif;
+    font-weight: 700;
+
+    color: #000000;
+
+    margin-bottom: 15px;
+}
+
+.timeline-item p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.circle {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    background: #C8A53C;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 700;
+
+    margin: 0 auto 25px;
+}
+
+.timeline-deadline {
+    text-align: center;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 700;
+
+    color: #000000;
+
+    font-size: 1.2rem;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   DETAILS / CARDS
+========================================================= */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+
+    padding: 28px;
+
+    border-radius: 0;
+
+    border-top: 4px solid #C8A53C;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .05);
+
+    transition: .3s;
+}
+
+.card h3 {
+    font-family: "Chronicle Display", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    color: #000000;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.light {
+    background: #f7f7f7;
+}
+
+
+/* =========================================================
+   APPLICATION FORM
+========================================================= */
+
+.form-wrapper {
+    max-width: 760px;
+    margin: auto;
+
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 0;
+
+    border-top: 4px solid #C8A53C;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+}
+
+.form-wrapper h2 {
+    font-family: "Chronicle Display", Georgia, serif;
+    color: #000000;
+}
+
+.form-wrapper p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 600;
+
+    color: #000000;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 0;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: #111;
+
+    background: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 400;
+    color: #888;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #C8A53C;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: "Chronicle Display", Georgia, serif;
+}
+
+.contact p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.contact a {
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   INNTEO LOGO
+========================================================= */
+
+.innteo-logo {
+    height: 250px;
+    width: auto;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin: auto;
+
+    transition: .3s;
+}
+
+.innteo-logo:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   ACCORDION / TECHNOLOGICAL CHALLENGES
+========================================================= */
+
+.challenge-section {
+    padding: 90px 0;
+}
+
+.section-title {
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: 2.4rem;
+
+    margin-bottom: 45px;
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.accordion-item {
+    border-top: 2px solid #d9d9d9;
+
+    transition: .35s;
+}
+
+.accordion-item.active {
+    border-top: 2px solid #C8A53C;
+}
+
+.accordion-header {
+    width: 100%;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+
+    padding: 28px 0;
+
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #000000;
+}
+
+.accordion-header:hover {
+    color: #C8A53C;
+}
+
+.accordion-icon {
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.6rem;
+
+    color: #C8A53C;
+
+    transition: .3s;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .45s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 900px;
+
+    padding-bottom: 25px;
+}
+
+.accordion-content p {
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 28px;
+
+    color: #444;
+
+    line-height: 1.8;
+}
+
+.accordion-content h4 {
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: 1.45rem;
+
+    margin-bottom: 18px;
+
+    color: #000000;
+
+    font-weight: 700;
+}
+
+.accordion-content ul {
+    list-style: none;
+}
+
+.accordion-content li {
+    position: relative;
+
+    padding-left: 20px;
+
+    margin-bottom: 16px;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.08rem;
+
+    color: #333;
+}
+
+.accordion-content li::before {
+    content: ">";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #C8A53C;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    top: -1px;
+}
+
+
+/* =========================================================
+   RECRUITMENT BANNER
+========================================================= */
+
+.recruitment-banner {
+    padding: 90px 0;
+
+    background: #f7f7f7;
+
+    text-align: center;
+}
+
+.recruitment-banner h2 {
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: 2.7rem;
+
+    margin-bottom: 20px;
+
+    color: #000000;
+}
+
+.recruitment-banner h2 strong {
+    font-family: "Chronicle Display", Georgia, serif;
+    color: #C8A53C;
+}
+
+.recruitment-banner p {
+    max-width: 760px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.15rem;
+
+    color: #555;
+}
+
+.free-program {
+    max-width: 820px;
+
+    margin: 0 auto 40px;
+
+    padding: 20px 30px;
+
+    background: #ffffff;
+
+    border-left: 5px solid #C8A53C;
+
+    border-radius: 0;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .05);
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.05rem;
+
+    color: #333;
+}
+
+.free-program strong {
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-weight: 700;
+
+    color: #000000;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section {
+    padding: 90px 0;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 28% 67%;
+    gap: 60px;
+    align-items: start;
+}
+
+.faq-heading h2 {
+    margin: 0;
+
+    font-family: "Chronicle Display", Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #111;
+}
+
+.faq {
+    width: 100%;
+}
+
+.faq-item {
+    margin-bottom: 12px;
+}
+
+.faq-question {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 32px 1fr 24px;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 16px;
+
+    background: #f4f4f4;
+    border: 1px solid #e7e7e7;
+    border-radius: 2px;
+
+    cursor: pointer;
+    text-align: left;
+
+    color: #222;
+    transition: background-color 0.25s ease;
+}
+
+.faq-question:hover {
+    background: #eeeeee;
+}
+
+.faq-number {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cca974;
+    border-radius: 4px;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-size: 0.65rem;
+    color: #fff;
+}
+
+.faq-question-text {
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.faq-icon {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #777;
+
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.25s ease,
+        padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 350px;
+    opacity: 1;
+
+    padding: 18px 18px 12px 60px;
+}
+
+.faq-answer p {
+    margin: 0;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #000000;
+
+    color: #fff;
+
+    padding: 35px 0;
+
+    margin-top: 80px;
+
+    border-top: 3px solid #A68943;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.footer-left p {
+    color: #cfcfcf;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    text-align: left;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.footer-right {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+.footer-title {
+    font-family: "Ringside Wide", "Ringside Regular", sans-serif;
+
+    font-size: .9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #A68943;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.footer-right a {
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    margin: 3px 0;
+
+    transition: .25s;
+
+    font-weight: 400;
+}
+
+.footer-right a:hover {
+    color: #A68943;
+}
+
+
+/* =========================================================
+   ABOUT LAYOUT
+========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-grid.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.about-text h2 {
+    font-family: "Chronicle Display", Georgia, serif;
+
+    color: #000000;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE TREATMENT
+========================================================= */
+
+.about-image-frame {
+    width: 100%;
+    position: relative;
+}
+
+.about-image-frame img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 0;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+.about-image-frame-mission {
+    width: 100%;
+}
+
+.about-image-frame-mission .about-image {
+    width: 100%;
+    overflow: visible;
+    border-radius: 0;
+}
+
+.about-image-frame-mission .about-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 0;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+}
+
+
+/* =========================================================
+   ABOUT IMAGE DECORATIVE CORNERS
+========================================================= */
+
+.about-image-frame .frame-top,
+.about-image-frame .frame-bottom {
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    background: transparent;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+.about-image-frame .frame-top {
+    top: -14px;
+    left: -14px;
+
+    border-top: 1px solid #cba62d;
+    border-left: 1px solid #cba62d;
+}
+
+.about-image-frame .frame-bottom {
+    right: -14px;
+    bottom: -14px;
+
+    border-right: 1px solid #cba62d;
+    border-bottom: 1px solid #cba62d;
+}
+
+
+/* =========================================================
+   REGULATIONS HIGHLIGHT + REGULATIONS LIST
+========================================================= */
+
+.regulations-highlight {
+    padding: 30px 0 10px;
+}
+
+.regulations-highlight-box {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 24px 30px;
+
+    background: #f7f5ef;
+
+    border-left: 4px solid #C8A53C;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.regulations-highlight-icon {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #C8A53C;
+
+    color: #fff;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+.regulations-highlight-content {
+    flex: 1;
+}
+
+.regulations-highlight-content h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-family: "Chronicle Display", Georgia, serif;
+
+    font-size: 1.25rem;
+
+    color: #000000;
+}
+
+.regulations-highlight-content > p {
+    margin-bottom: 8px;
+
+    line-height: 1.55;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.reg-list {
+    list-style: none;
+}
+
+.reg-list li {
+    position: relative;
+
+    padding-left: 25px;
+
+    margin-bottom: 12px;
+
+    margin-left: 15px;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    color: #333;
+}
+
+.reg-list li::before {
+    content: ">";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #C8A53C;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    top: -2px;
+}
+
+
+/* =========================================================
+   CONSENT / GDPR
+========================================================= */
+
+.consent-label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    font-size: .9rem;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    cursor: pointer;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+
+    font-weight: 400;
+}
+
+.consent-label input {
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 3px;
+
+    accent-color: #C8A53C;
+
+    cursor: pointer;
+}
+
+.consent-label a {
+    color: #C8A53C;
+
+    text-decoration: underline;
+
+    font-family: "Ringside Regular", Arial, sans-serif;
+}
+
+.consent-label a:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .timeline,
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        width: calc(100% - 40px);
+
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 7vw, 4.8rem);
+    }
+
+    .hero {
+        text-align: center;
+
+        background-position: center center;
+    }
+
+    .lead {
+        text-align: center;
+
+        display: block;
+    }
+
+    .about-grid,
+    .about-grid.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid.reverse .about-image {
+        order: -1;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-image-frame {
+        max-width: 420px;
+    }
+}
+
+
+/* =========================================================
+   HEADER / HERO - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    header {
+        height: 72px;
+    }
+
+    .nav {
+        width: calc(100% - 40px);
+    }
+
+    .nav-left,
+    .nav-right {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: .72rem;
+
+        letter-spacing: .04em;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .accordion-header {
+        font-size: 1.35rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .faq-section {
+        padding: 60px 0;
+    }
+
+    .faq-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .faq-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-question {
+        grid-template-columns: 28px 1fr 20px;
+
+        padding: 14px;
+    }
+
+    .faq-answer p {
+        font-size: .85rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 16px 15px 10px 54px;
+    }
+
+    .hero-content {
+        width: calc(100% - 40px);
+
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 8vw, 4.5rem);
+    }
+
+    .hero-powered {
+        margin-top: 28px;
+    }
+
+    .hero-powered img {
+        width: 145px;
+    }
+
+    .hero-button {
+        margin-top: 30px;
+
+        min-width: 160px;
+
+        padding: 15px 32px;
+
+        font-size: .75rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-left p {
+        text-align: center;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .regulations-highlight-box {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    header {
+        height: 66px;
+    }
+
+    .nav {
+        width: calc(100% - 30px);
+
+        justify-content: center;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .hero {
+        min-height: 100svh;
+
+        background-position: 53% center;
+    }
+
+    .hero-content {
+        width: calc(100% - 30px);
+
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.35rem, 11vw, 3.6rem);
+
+        line-height: 1.04;
+    }
+
+    .hero-powered {
+        margin-top: 25px;
+    }
+
+    .hero-powered img {
+        width: 130px;
+    }
+
+    .hero-button {
+        margin-top: 28px;
+
+        min-width: 150px;
+
+        padding: 14px 28px;
+
+        font-size: .68rem;
+
+        letter-spacing: .2em;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero {
+        background-position: 52% center;
+    }
+
+    .hero-content {
+        width: calc(100% - 24px);
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-powered img {
+        width: 120px;
+    }
+}
+
+
+/* =========================================================
+   ABOUT PAGE HEADER / BANNER
+========================================================= */
+
+.inner-page-header {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 105px 0 65px;
+
+    background-image: url("images/sobhabanner-dim30.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+
+.inner-page-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: 1;
+}
+
+.inner-page-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18) 0%,
+        rgba(0, 0, 0, 0.08) 45%,
+        rgba(0, 0, 0, 0.38) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, calc(100% - 40px));
+    margin: auto;
+    text-align: center;
+}
+
+.inner-page-header h1 {
+    font-family: "Chronicle Display", Georgia, serif;
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+    font-weight: 400;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.4);
+}
+
+.inner-page-header p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.94);
+    font-family: "Ringside Regular", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.inner-page-header .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+
+    .inner-page-header {
+        min-height: 350px;
+        padding: 95px 20px 50px;
+        background-position: center center;
+    }
+
+    .inner-page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .inner-page-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .inner-page-header {
+        min-height: 325px;
+        padding: 85px 15px 45px;
+    }
+
+    .inner-page-header h1 {
+        font-size: 2.15rem;
+    }
+
+    .inner-page-header p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   RECRUITMENT TIMELINE ICONS
+========================================================= */
+
+.timeline-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.timeline-icon svg {
+    display: block;
+    width: 58px;
+    height: 58px;
+
+    fill: none;
+    stroke: #cba62d;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: transform 0.35s ease;
+}
+
+.card:hover .timeline-icon svg {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.timeline-number {
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   PROGRAM PARTNER
+========================================================= */
+
+.program-partner-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.partner-card {
+    width: 100%;
+    max-width: none;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(260px, .8fr);
+    align-items: center;
+    gap: 70px;
+
+    margin-top: 32px;
+    padding: 46px 55px;
+
+    border-top: 4px solid #cba62d;
+}
+
+.partner-content {
+    min-width: 0;
+}
+
+.partner-content p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.partner-content p:last-child {
+    margin-bottom: 0;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.partner-logo img {
+    display: block;
+
+    width: min(100%, 360px);
+    height: auto;
+
+    transition: transform 0.45s ease;
+}
+
+.partner-card:hover .partner-logo img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+
+    .program-partner-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .partner-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        padding: 34px 26px;
+    }
+
+    .partner-content {
+        text-align: left;
+    }
+
+    .partner-logo {
+        justify-content: center;
+    }
+
+    .partner-logo img {
+        width: min(100%, 280px);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .partner-card {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .partner-logo img {
+        width: min(100%, 230px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE NAVIGATION
+========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+
+    background: #fff;
+    border-radius: 2px;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        width 0.35s ease;
+}
+
+
+/* =========================================================
+   TABLET + MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header .nav {
+        position: relative;
+        z-index: 1001;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1003;
+
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+    }
+
+    .main-nav > ul {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+
+        margin: 0;
+        padding: 120px 40px 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        list-style: none;
+
+        background: rgba(25, 24, 23, 0.88);
+
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+
+        transform: translateX(-100%);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+            transform 0.45s cubic-bezier(.22, .61, .36, 1),
+            opacity 0.35s ease,
+            visibility 0.45s ease;
+
+        z-index: 1002;
+    }
+
+    .main-nav > ul li {
+        width: 100%;
+        max-width: 420px;
+
+        opacity: 0;
+        transform: translateX(-25px);
+
+        transition:
+            opacity 0.35s ease,
+            transform 0.35s ease;
+    }
+
+    .main-nav > ul li a {
+        display: block;
+
+        width: 100%;
+        padding: 18px 0;
+
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+
+        font-family:
+            "Ringside Wide",
+            "Ringside Regular",
+            sans-serif;
+
+        font-size: 1rem;
+        letter-spacing: 0.20em;
+        text-transform: uppercase;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        transition:
+            color 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .main-nav > ul li:first-child a {
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .main-nav > ul li a:hover {
+        color: #cba62d;
+        border-color: rgba(203, 166, 45, 0.5);
+    }
+
+    .main-nav.menu-open > ul {
+        transform: translateX(0);
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .main-nav.menu-open > ul li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .main-nav.menu-open > ul li:nth-child(1) {
+        transition-delay: 0.10s;
+    }
+
+    .main-nav.menu-open > ul li:nth-child(2) {
+        transition-delay: 0.17s;
+    }
+
+    .main-nav.menu-open > ul li:nth-child(3) {
+        transition-delay: 0.24s;
+    }
+
+    .main-nav.menu-open .menu-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .main-nav.menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+
+    .main-nav.menu-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .main-nav > ul {
+        padding: 105px 25px 40px;
+    }
+
+    .main-nav > ul li a {
+        padding: 16px 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.17em;
+    }
+}
+
+
+/* =========================================
+   ABOUT - MOBILE ORDER
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .about-grid,
+    .about-grid.reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* Każda sekcja: tekst → zdjęcie */
+    .about-grid .about-text {
+        order: 1;
+    }
+
+    .about-grid .about-image-frame {
+        order: 2;
+    }
+
+    .about-image,
+    .about-image-frame {
+        width: 100%;
+    }
+
+    .about-image img,
+    .about-image-frame img {
+        width: 100%;
+        height: auto;
+    }
+}
